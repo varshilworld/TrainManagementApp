@@ -1,14 +1,17 @@
 import java.util.*;
 public class Program {
     public static void main(String[] args) {
-        List<String> PassengerBoogies=new ArrayList<>();
-        PassengerBoogies.add("Sleeper");
-        PassengerBoogies.add("AC Chair");
-        PassengerBoogies.add("First Class");
-        System.out.println(PassengerBoogies);
-        PassengerBoogies.remove("AC Chair");
-        System.out.println(PassengerBoogies);
-        System.out.println(PassengerBoogies.contains("Sleeper"));
-        System.out.println("Final Passenger train list : \n" +PassengerBoogies);
+        //UC3
+    Set<String> bogies=new HashSet<>();
+    bogies.add("BG101");
+    bogies.add("BG102");
+    bogies.add("BG103");
+    bogies.add("BG104");
+    //Duplicates will be ignored
+    bogies.add("BG101");
+    bogies.add("BG102");
+    System.out.println(bogies);
+    System.out.println("duplicates are automatically ignored by hashset");
+    System.out.println("UC3 uniqueness validation completed");
     }
 }
