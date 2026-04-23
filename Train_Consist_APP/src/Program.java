@@ -6,7 +6,7 @@ import java.util.stream.*;
  *
  * UC8: Filter Passenger Bogies Using Streams
  */
-public class UseCase8TrainConsistMgmt {
+public class Program{
 
     // Reusing Bogie model from UC7
     static class Bogie {
