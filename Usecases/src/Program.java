@@ -1,17 +1,46 @@
-import java.util.*;
-public class Program {
+/**
+ * MAIN CLASS - UseCase18TrainConsistMgmt
+ *
+ * UC18: Linear Search for Bogie ID
+ */
+public class UseCase18TrainConsistMgmt {
+
     public static void main(String[] args) {
-        //UC3
-        Set<String> bogies=new HashSet<>();
-        bogies.add("BG101");
-        bogies.add("BG102");
-        bogies.add("BG103");
-        bogies.add("BG104");
-        //Duplicates will be ignored
-        bogies.add("BG101");
-        bogies.add("BG102");
-        System.out.println(bogies);
-        System.out.println("duplicates are automatically ignored by hashset");
-        System.out.println("UC3 uniqueness validation completed");
+
+        System.out.println("======================================");
+        System.out.println(" UC18 - Linear Search for Bogie ID ");
+        System.out.println("======================================\n");
+
+        // Create array of bogie IDs
+        String[] bogieIds = {"BG101", "BG205", "BG309", "BG412", "BG550"};
+
+        // Bogie ID to search
+        String searchId = "BG309";
+
+        // Display all bogies
+        System.out.println("Available Bogie IDs:");
+        for (String id : bogieIds) {
+            System.out.println(id);
+        }
+
+        // ----- LINEAR SEARCH LOGIC -----
+        boolean found = false;
+
+        for (String id : bogieIds) {
+            if (id.equals(searchId)) {
+                found = true;
+                break; // stop early once found
+            }
+        }
+
+        // Display result
+        if (found) {
+            System.out.println("\nBogie " + searchId + " found in train consist.");
+        } else {
+            System.out.println("\nBogie " + searchId + " NOT found in train consist.");
+        }
+
+        System.out.println("\nUC18 search completed...");
     }
 }
+
